@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Klipperlauncher</title>
+<style>
+    body {
+        background: rgb(37,115,208);
+        background: radial-gradient(circle, rgb(4, 16, 31) 0%, rgb(4, 21, 41) 100%);
+    }
+    .holder {    
+        background-image: url('background.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:initial;
+        height: 100%;
+    }
+    h1 {
+        color: #f3f4f3;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+    h2 {
+        color: #f3f4f3;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    .holder {
+        background-color: rgba(0,0,0, 0.4);
+        text-align: center;
+    }
+    .weapon {
+        width:45%;
+        float:  left;
+        text-align: center;
+        animation: pulsate 5s infinite;
+        background: radial-gradient(
+            circle,
+             rgb(33, 56, 89) 0%,
+             rgb(13, 87, 117) 34%, 
+             rgba(4, 21, 41,0) 35%,
+             rgba(4, 21, 41,0) 100%);;
+    }
+
+@keyframes pulsate {
+	0% {transform: scale(1.0, 1.0); opacity: 1;}
+    25% {transform: scale(0.8, 0.8); opacity: 0.7;}
+	50% {opacity: 1.0;}
+    25% {transform: scale(0.8, 0.8); opacity: 0.7;}
+	100% {transform: scale(1.0, 1.0); opacity: 1;}
+}
+</style>
+</head>
+<body>
+      
+<div clas="holder">
+    <img src="klipper.svg" style="width:120px;">
+    <h2>Choose your pill</h2>
+    <div class="weapon">
+    <a href="#" onclick="window.open(`http://${window.location.hostname}:9887/`)">
+        <img src="fluidd.svg" style="height: 200px" alt="Fluidd">
+        <h1>Fluidd</h1>
+    </a>
+    </div>
+    <div class="weapon">
+    <a href="#" onclick="window.open(`http://${window.location.hostname}:9888/`)">
+        <img src="mainsail.svg" style="height: 200px" alt="Mainsail">
+        <h1>Mainsail</h1>
+    </a>
+    </div>
+</div>
+</body>
+</html>
